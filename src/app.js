@@ -10,7 +10,7 @@ const globalErr = require('./controllers/errorController')
 app.set('trust proxy', 1);
 
 app.use( cors({
-    origin: 'https://dsatracker-ochre.vercel.app',
+    origin: process.env.FRONTEND_BASE_URL,
     credentials: true
   }))
 app.use(cookieParser());  
